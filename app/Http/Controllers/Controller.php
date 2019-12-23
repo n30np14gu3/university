@@ -9,5 +9,11 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+    protected $response = [
+      'status' => 'error',
+      'message' => '',
+      'data' => null
+    ];
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
