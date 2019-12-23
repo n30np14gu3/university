@@ -19,6 +19,7 @@ class CreateStudentInfoTable extends Migration
             $table->string('discipline', 30);
             $table->integer('year');
             $table->smallInteger('semester')->unsigned();
+            $table->smallInteger('form')->unsigned();
             $table->smallInteger('mark')->unsigned();
             $table->timestamps();
         });

@@ -12,9 +12,21 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $discipline
  * @property int $year
  * @property int $semester
+ * @property int form
  * @property int $mark
+ *
+ * @property StudyPlan $plan
+ * @property Student $student
  */
 class StudentInfo extends Model
 {
     protected $table = 'student_info';
+
+    public function plan(){
+        return $this->hasOne('App\Models\StudyPlan', 'discipline_name', 'discipline');
+    }
+
+    public function student(){
+        return $this->hasOne('App\Models\Student', 'id', 'student_id');
+    }
 }

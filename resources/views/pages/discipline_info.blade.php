@@ -1,15 +1,17 @@
 @extends('index')
 
 @section('page-title', 'Информация о дисциплине')
-@section('discipline_info', 'active disabled')
+@section('get-info', 'active disabled')
 
 @section('main-content')
     <form class="ui form" id="discipline_form">
         <div class="field">
-            <label>Выберите дисциплину: </label>
-            <select name="discipline" required>
-                @foreach($disciplines as $d)
-                    <option value="{{@$d->id}}">{{@$d->discipline_name}}</option>
+            <label>Выберите студента: </label>
+            <select name="stud_id" required>
+                @foreach(@$students as $s)
+                    <div class="item" data-value="{{@$s->id}}">
+                        {{@$s->first_name}} {{@$s->last_name}} {{@$s->patronymic}} гр. {{$s->group_num}}
+                    </div>
                 @endforeach
             </select>
         </div>

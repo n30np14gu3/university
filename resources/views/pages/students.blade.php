@@ -45,7 +45,7 @@
             <div class="ui search selection dropdown" id="edit_student_name">
                 <input type="hidden" name="stud_id" required>
                 <i class="dropdown icon"></i>
-                <div class="default text">Форма обучения</div>
+                <div class="default text">Студент</div>
                 <div class="menu">
                     @foreach($students as $s)
                         <div class="item" data-value="{{@$s->id}}">{{@$s->first_name}} {{@$s->last_name}} {{$s->patronymic}} гр.{{@$s->group_num}}</div>

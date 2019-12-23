@@ -20,7 +20,7 @@
             <a href="{{url('/management/discipline_info')}}" class="item @yield('discipline_info')">Информация о дисциплине</a>
             <a href="{{url('/management/students')}}" class="item @yield('students')">Управление студентами</a>
             <a href="{{url('/management/plan')}}" class="item @yield('plan')">Управление планом обучения</a>
-            <a href="{{url('/tasks/info')}}" class="item @yield('info')">Управление журналом успеваемости</a>
+            <a href="{{url('/management/marks')}}" class="item @yield('marks')">Управление журналом успеваемости</a>
         </div>
     </div>
     <a class="item @yield('get-info')" href="{{url('/get_info')}}">Выдать справку об успеваемости</a>
