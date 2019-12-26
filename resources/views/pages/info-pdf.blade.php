@@ -1,7 +1,6 @@
 @extends('index')
 
 @section('page-title', 'Информация о студенте')
-@section('discipline_info', 'active disabled')
 
 @section('main-content')
     <h1 style="text-align: center">Информация о студенте: ({{@$student->first_name}} {{@$student->last_name}} {{@$student->patronymic}} гр. {{$student->group_num}})</h1>

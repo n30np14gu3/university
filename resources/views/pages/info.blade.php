@@ -1,12 +1,12 @@
 @extends('index')
 
 @section('page-title', 'Информация о студенте')
-@section('discipline_info', 'active disabled')
+@section('get-info', 'active disabled')
 
 @section('main-content')
     <form class="ui form" action="{{url('/action/get_info')}}" method="get">
         <div class="field">
-            <label>Выберите дисциплину: </label>
+            <label>Выберите студента: </label>
             <div class="ui search selection dropdown">
                 <input type="hidden" name="id" required>
                 <i class="dropdown icon"></i>

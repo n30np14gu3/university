@@ -27,7 +27,7 @@ class managementController extends Controller
         return response($this->response);
     }
 
-    public function disciplinePrepare(){
+    public function disciplinePrepare(){;
         return view('pages.discipline_info')->with([
            'disciplines' => StudyPlan::all()
         ]);
@@ -69,7 +69,7 @@ class managementController extends Controller
         $this->response['status'] = 'OK';
         $this->response['data'] = [
             'hours' => $plan->hours,
-            'form' => $plan->form ? "Очная" : "Заочная"
+            'form' => $plan->form ? "Оценка" : "Зачет"
         ];
         return response()->json($this->response);
     }
